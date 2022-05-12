@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous" />
+    <link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico" />
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400&family=Varela+Round&display=swap');
+    </style>
+    <link rel="stylesheet" href="style.css" />
+    <title>Developer's BootCamp</title>
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg bg-dark navbar-dark fixed-top" role="navigation">
+        <div class="container">
+            <a href="#" class="navbar-brand"><span class="text-primary">Developer's </span>BootCamp</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse">
+                <i class="bi bi-list" style="color: #0d6efd"></i>
+            </button>
+            <div class="collapse navbar-collapse">
+                <ul class="nav navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a href="#learn" class="nav-link">What You'll Learn</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#mode" class="nav-link">Mode of Learning</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#questions" class="nav-link">Questions</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#instructors" class="nav-link">Instructors</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#contact" class="nav-link">Contact Us</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Showcase -->
+    <section class="bg-dark text-light p-5 pb-lg-0 text-center text-sm-start">
+        <div class="container">
+            <div class="d-flex align-items-center justify-content-between">
+                <div>
+                    <h1>Become a <span class="text-warning" data-aos="zoom-in-up" data-aos-duration="1500">Web
+                            Developer</span></h1>
+                    <p class="my-4">
+                        Get access to everything you need to get started developing websites. Learn HTML, CSS and
+                        JavaScript through project-based learning and also more advanced technologies to learn about web
+                        development.
+                    </p>
+                    <button class="btn btn-primary btn-lg" data-bs-toggle="modal" data-bs-target="#enroll">Start The
+                        Enrollment</button>
+
+                    <!-- Modal -->
+                    <div class="modal fade" id="enroll">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title text-black" id="exampleModalLabel">Start The Enrollment</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body text-dark">
+                                    <p>Fill out this form & we will be back to you..</p>
+                                    <span id="warning" class="text-danger"></span>
+                                    <span id="success" class="text-success"></span>
+                                    <form>
+                                        <div>
+                                            <label for="name" class="col-form-label">Name</label>
+                                            <input type="text" class="form-control" id="name" autocomplete="off">
+                                        </div>
+                                        <div>
+                                            <label for="email" class="col-form-label">Email</label>
+                                            <input type="email" class="form-control" id="email" autocomplete="off">
+                                        </div>
+                                        <div>
+                                            <label for="phone" class="col-form-label">Phone</label>
+                                            <input type="tel" class="form-control" id="phone" autocomplete="off">
+                                        </div>
+                                        <div class="pt-3 pb-0">
+                                            <input type="submit" name="submit" value="Submit" class="btn btn-primary"
+                                                onclick="return validation()">
+                                            <button type="button" class="btn btn-secondary"
+                                                data-bs-dismiss="modal">Close</button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <img class="img-fluid w-50 d-none d-sm-block" src="img/showcase.svg" alt="" />
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter -->
+    <section class="text-dark p-5 pb-md-1">
+        <div class="container">
+            <div class="d-md-flex justify-content-between align-items-center">
+                <h3 class="mb-3 mb-md-0">
+                    For Our Newsletter
+                    <p class="h5 text-black-50 lead">Just send us your email..</p>
+                </h3>
+                <form class="input-group">
+                    <input id="newsemail" type="email" class="form-control" placeholder="Enter Your Email" value=""
+                        autocomplete="off" />
+                    <input type="submit" name="submit" value="Send" class="btn btn-primary" onclick="return check()">
+                    <span id="error"></span>
+                </form>
+            </div>
+        </div>
+        <section id="learn"></section>
+    </section>
+
+    <!-- Learn Section -->
+    <section id="learn" class="p-5">
+        <div class="container">
+            <div class="row align-items-center justify-content-between">
+                <div class="col-md">
+                    <img src="img/basic.svg" class="img-fluid" alt="" />
+                </div>
+                <div class="col-md p-md-5 pt-5" data-aos="fade-down" data-aos-duration="750">
+                    <h2 class="text-black">Learn The Fundamentals</h2>
+                    <p class="pt-3">
+                        The most important skill or knowledge every developer should learn first is three basic
+                        building blocks and they are HTML, CSS, and JavaScript.
+                    </p>
+                    HTML is a markup language used by the browser to manipulate text, images, and other
+                    content, in
+                    order to display it in the required format. CSS is
+                    a simply designed language intended to simplify the process of making web pages presentable.
+                    JavaScript is well-known for the development of web pages, it can be used for Client-side
+                    developments as
+                    well as Server-side developments.
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="p-5 bg-dark">
+        <div class="container">
+            <div class="row align-items-center justify-content-between">
+                <div class="col-md p-md-5 pb-5 text-light" data-aos="fade-down" data-aos-duration="750">
+                    <h2 class="text-white">JavaScript Frameworks and Libraries</h2>
+                    <p class="pt-3">
+                        JavaScript libraries and frameworks make website and application development easier with
+                        wide-ranging features and functionalities.
+                    </p>
+                    Its versatility favors both back-end and front-end development, in addition to testing them. As a
+                    result, you can find many JavaScript libraries and frameworks that serve various purposes i.e.
+                    React.Js,
+                    Angular.Js, Vue.Js, Node.Js..
+                </div>
+                <div class="col-md mt-md-5">
+                    <img src="img/jslib.svg" class="img-fluid" alt="" />
+                </div>
+            </div>
+        </div>
+        <section id="mode"></section>
+    </section>
+
+    <!-- Mode -->
+    <section id="mode" class="p-5">
+        <div class="container">
+            <h2 class="text-center mb-4 text-black pb-4 text-decoration-underline">Mode of Learning</h2>
+            <div class="row text-center g-4">
+                <div class="col-md">
+                    <div class="card bg-dark text-light pb-3">
+                        <div class="card-body text-center">
+                            <i class="bi bi-laptop h1 pt-2" style="font-size: 3rem; color: #ffc107"></i>
+                            <h4 class="card-title mt-3">Virtual</h4>
+                            <p class="card-text">
+                                Virtual mode is available for those students who can not reach at our location, so they
+                                can enjoy their lectures from any where.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md">
+                    <div class="card bg-dark text-light pb-3">
+                        <div class="card-body text-center">
+                            <i class="bi bi-person-square h1 pt-2" style="font-size: 3rem; color: #ffc107"></i>
+                            <h4 class="card-title mt-3">Hybrid</h4>
+                            <p class="card-text">
+                                Hybrid mode is designed for easy student transitions between virtual and on location
+                                learning.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row-md mt-4">
+                <div class="card bg-dark text-light pb-3">
+                    <div class="card-body text-center">
+                        <i class="bi bi-people h1 pt-2" style="font-size: 3rem; color: #ffc107"></i>
+                        <h4 class="card-title mt-3">In Person</h4>
+                        <p class="card-text justify-content-center px-md-5">
+                            If student is comfortable with timing of lectures then this in person mode is best for them.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <section id="questions"></section>
+    </section>
+
+    <!-- Questions -->
+    <section id="questions" class="p-5">
+        <div class="container">
+            <h2 class="text-center mb-4 text-black pb-4 text-decoration-underline">Frequently Asked Questions</h2>
+            <!-- Que 1 -->
+            <div class="accordion accordion-flush" id="accordionFlushExample">
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#flush-collapseOne">
+                            What do i need to know?
+                        </button>
+                    </h2>
+                    <div id="flush-collapseOne" class="accordion-collapse collapse"
+                        data-bs-parent="#accordionFlushExample">
+                        <div class="accordion-body text-secondary">
+                            There is no need because if you are beginner, we have beginner level course where you can
+                            learn basic fundamentals.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Que 2 -->
+                <div class="accordion accordion-flush" id="accordionFlushExample">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#flush-collapsetwo">
+                                How much does it cost to attend?
+                            </button>
+                        </h2>
+                        <div id="flush-collapsetwo" class="accordion-collapse collapse"
+                            data-bs-parent="#accordionFlushExample">
+                            <div class="accordion-body text-secondary">
+                                There are many courses of beginner to advanced level and thier costs are different and
+                                it also depends on which mode you select.
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Que 3 -->
+                    <div class="accordion accordion-flush" id="accordionFlushExample">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#flush-collapsethree">
+                                    Do you help me to find a job?
+                                </button>
+                            </h2>
+                            <div id="flush-collapsethree" class="accordion-collapse collapse"
+                                data-bs-parent="#accordionFlushExample">
+                                <div class="accordion-body text-secondary">
+                                    There is not any guarantee to give you a job but if you have any queries related to
+                                    job, our instructors are always there for you.
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Que 4 -->
+                        <div class="accordion accordion-flush" id="accordionFlushExample">
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#flush-collapsefour">
+                                        Can i get recordings in virtual mode?
+                                    </button>
+                                </h2>
+                                <div id="flush-collapsefour" class="accordion-collapse collapse"
+                                    data-bs-parent="#accordionFlushExample">
+                                    <div class="accordion-body text-secondary">
+                                        No. You will get notes which is made by our instructors.
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Que 5 -->
+                            <div class="accordion accordion-flush" id="accordionFlushExample">
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header">
+                                        <button class="accordion-button collapsed" type="button"
+                                            data-bs-toggle="collapse" data-bs-target="#flush-collapsefive">
+                                            Is there any special batch for beginner?
+                                        </button>
+                                    </h2>
+                                    <div id="flush-collapsefive" class="accordion-collapse collapse"
+                                        data-bs-parent="#accordionFlushExample">
+                                        <div class="accordion-body text-secondary">
+                                            Yes, there is absolute beginner batch which is very useful to get into this
+                                            web development field.
+                                        </div>
+                                    </div>
+                                </div>
+                                <section id="instructors"></section>
+    </section>
+
+    <!-- Instructors -->
+    <section id="instructors" class="p-5 bg-dark">
+        <div class="container">
+            <h2 class="text-center text-white">Our Instructors</h2>
+            <div class="row text-center g-4 p-lg-4 pt-3">
+                <div class="col-md-4" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="400">
+                    <div class="card bg-light text-dark pb-3">
+                        <div class="card-body text-center">
+                            <img class="rounded-circle w-50" src="img/pitor.jpg" alt="">
+                            <h4 class="card-title mt-3 text-black">Pitor Brodny</h4>
+                            <p class="card-text">
+                                Pitor’s experience as a web developer spans across multiple companies and countries.
+                                He is working in Amazon and also built software for Woumedia in Denmark and Com Laude in
+                                the
+                                UK. He is a huge proponent of Behavior-Driven Development and high quality code.
+                            </p>
+                            <a href="https://www.linkedin.com/" class="bi-linkedin px-2"
+                                style="font-size: xx-large;"></a>
+                            <a href="https://www.instagram.com/" class="bi-instagram" style="font-size: xx-large;"></a>
+                            <a href="https://github.com/" class="bi-github px-2" style="font-size: xx-large;"></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="500">
+                    <div class="card bg-light text-dark pb-3">
+                        <div class="card-body text-center">
+                            <img class="rounded-circle w-50" src="img/james.jpg" alt="">
+                            <h4 class="card-title mt-3 text-black">James Kiesel</h4>
+                            <p class="card-text">
+                                James is a full-stack developer helping the world to make better decisions with his
+                                experience, working at Microsoft and an
+                                open-source project empowering communities to turn discussion into action.
+                            </p>
+                            <a href="https://www.linkedin.com/" class="bi-linkedin px-2"
+                                style="font-size: xx-large;"></a>
+                            <a href="https://www.instagram.com/" class="bi-instagram" style="font-size: xx-large;"></a>
+                            <a href="https://github.com/" class="bi-github px-2" style="font-size: xx-large;"></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="600">
+                    <div class="card bg-light text-dark pb-3">
+                        <div class="card-body text-center">
+                            <img class="rounded-circle w-50" src="img/mike.jpg" alt="">
+                            <h4 class="card-title mt-3 text-black">Mike Leone</h4>
+                            <p class="card-text">
+                                Mike is the founder of Parkerse and worked as a full-stack developer at
+                                Curiculat. He is currently working at Myntra.
+                            </p>
+                            <a href="https://www.linkedin.com/" class="bi-linkedin px-2"
+                                style="font-size: xx-large;"></a>
+                            <a href="https://www.instagram.com/" class="bi-instagram" style="font-size: xx-large;"></a>
+                            <a href="https://github.com/" class="bi-github px-2" style="font-size: xx-large;"></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <section id="contact"></section>
+    </section>
+
+    <!-- Contact -->
+    <section class="p-5" id="contact">
+        <div class="container">
+            <div class="row align-items-center justify-content-between">
+                <div class="col-md">
+                    <img src="img/contact.svg" class="img-fluid w-auto" alt="">
+                </div>
+                <div class="col-md p-5">
+                    <h2 class="text-center text-md-start text-black">Contact Us</h2>
+                    <div class="row pt-3">
+                        <div class="col-2 col-lg-1">
+                            <i class="bi bi-geo-alt-fill" style="font-size: xx-large;"></i>
+                        </div>
+                        <div class="col-10 col-lg-11 px-lg-3 pt-2">
+                            1st Floor, Gisma Commerce Zone, <br>Nr. Nagra Temple,
+                            Pune,
+                            <br>Maharashtra 411006
+                        </div>
+                    </div>
+                    <div class="row pt-3">
+                        <div class="col-2 col-lg-1">
+                            <i class="bi bi-telephone-fill" style="font-size: x-large;"></i>
+                        </div>
+                        <div class="col-10 col-lg-11 px-lg-3 pt-2">
+                            +91 8140803375
+                        </div>
+                    </div>
+                    <div class="row pt-3">
+                        <div class="col-2 col-lg-1">
+                            <i class="bi bi-envelope-fill" style="font-size: x-large;"></i>
+                        </div>
+                        <div class="col-10 col-lg-11 px-lg-3 pt-2">
+                            dev.hrmanvar@gmail.com
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="p-5 bg-dark text-light text-md-center pb-2 position-relative">
+        <div class="container">
+            <p style="font-size: small;">Copyrigth &copy; 2021 <span class="text-primary">Developer's</span> BootCamp |
+                <a href="https://www.linkedin.com/in/harsh-manvar-917505214/"
+                    style="text-decoration: none;">HrManvaR</a>
+            </p>
+            <a href="#" class="position-absolute bottom-0 end-0 p-4">
+                <i class="bi bi-arrow-up-circle-fill h2"></i>
+            </a>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous">
+        </script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+    <script src="main.js"></script>
+</body>
+</html>
